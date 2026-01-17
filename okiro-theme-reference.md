@@ -104,6 +104,75 @@ transition: all 0.3s ease;   /* smooth, deliberate */
 }
 ```
 
+## Spacing Scale
+
+```css
+/* Vertical rhythm */
+--space-sm: 16px;
+--space-md: 24px;
+--space-lg: 32px;
+--space-xl: 56px;
+--space-2xl: 72px;
+--space-3xl: 80px;
+
+/* Specific usage */
+.container { padding: 60px 24px 140px; }
+.section { margin-bottom: 72px; }
+.hero { margin-bottom: 80px; }
+.footer { padding-top: 56px; }
+.links { gap: 32px; }
+```
+
+## Hover States
+
+All hovers use `transition: color 0.15s` - fast and snappy.
+
+```css
+/* Standard link: muted → bright */
+a {
+  color: var(--muted);
+  transition: color 0.15s;
+}
+a:hover {
+  color: var(--bright);
+}
+
+/* Accent link: subtle → accent */
+a.credit {
+  color: var(--subtle);
+  transition: color 0.15s;
+}
+a.credit:hover {
+  color: var(--accent);
+}
+```
+
+## Code Blocks
+
+```css
+.code-block {
+  background: var(--abyss);
+  border: 1px solid var(--shadow);
+  padding: 16px 28px;
+  display: inline-flex;
+  gap: 16px;
+}
+
+/* For lists/menus */
+.code-list {
+  background: var(--abyss);
+  border: 1px solid var(--shadow);
+}
+.code-list-item {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--shadow);
+}
+```
+
+## Border Radius & Shadows
+
+**None.** The design uses sharp corners everywhere and relies on subtle borders (`1px solid var(--shadow)`) instead of shadows. This reinforces the terminal aesthetic.
+
 ## Tailwind Config (if using Tailwind)
 
 ```js
